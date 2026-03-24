@@ -29,6 +29,9 @@ public sealed partial class MainWindowViewModel : ViewModelBase
     // Доступные шрифты (для Toolbar)
     public IReadOnlyList<string> AvailableFonts { get; } = GetSystemFonts();
 
+    // Размеры шрифта
+    public IReadOnlyList<int> FontSizes { get; } = [8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 28, 36, 48, 72];
+
     public MainWindowViewModel(
         IDocumentService documentService,
         IEdmService edmService,
