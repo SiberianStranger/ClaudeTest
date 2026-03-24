@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:OpenDocEditor.App.ViewModels"
+             xmlns:ctrl="using:OpenDocEditor.App.Controls"
+             x:Class="OpenDocEditor.App.Views.DocumentEditorView"
+             x:DataType="vm:DocumentEditorViewModel"
+             Background="#808080">
+
+  <UserControl.Styles>
+    <!-- Страница документа -->
+    <Style Selector="Border.doc-page">
+      <Setter Property="Background" Value="White"/>
+      <Setter Property="BoxShadow" Value="2 2 8 0 #60000000"/>
+      <Setter Property="Margin" Value="20"/>
+    </Style>
+  </UserControl.Styles>
+
+  <!-- Область прокрутки с виртуальным отображением страниц -->
+  <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                VerticalScrollBarVisibility="Auto">
+    <ctrl:DocumentCanvas x:Name="DocCanvas"
+                         Document="{Binding Document}"
+                         HorizontalAlignment="Center"/>
+  </ScrollViewer>
+
+</UserControl>
