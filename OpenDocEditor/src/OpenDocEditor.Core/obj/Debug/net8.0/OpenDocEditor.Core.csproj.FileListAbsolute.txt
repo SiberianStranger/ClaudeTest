@@ -1,0 +1,12 @@
+/home/user/ClaudeTest/OpenDocEditor/src/OpenDocEditor.Core/obj/Debug/net8.0/OpenDocEditor.Core.csproj.AssemblyReference.cache
+/home/user/ClaudeTest/OpenDocEditor/src/OpenDocEditor.Core/obj/Debug/net8.0/OpenDocEditor.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/ClaudeTest/OpenDocEditor/src/OpenDocEditor.Core/obj/Debug/net8.0/OpenDocEditor.Core.AssemblyInfoInputs.cache
+/home/user/ClaudeTest/OpenDocEditor/src/OpenDocEditor.Core/obj/Debug/net8.0/OpenDocEditor.Core.AssemblyInfo.cs
+/home/user/ClaudeTest/OpenDocEditor/src/OpenDocEditor.Core/obj/Debug/net8.0/OpenDocEditor.Core.csproj.CoreCompileInputs.cache
+/home/user/ClaudeTest/OpenDocEditor/src/OpenDocEditor.Core/bin/Debug/net8.0/OpenDocEditor.Core.deps.json
+/home/user/ClaudeTest/OpenDocEditor/src/OpenDocEditor.Core/bin/Debug/net8.0/OpenDocEditor.Core.dll
+/home/user/ClaudeTest/OpenDocEditor/src/OpenDocEditor.Core/bin/Debug/net8.0/OpenDocEditor.Core.pdb
+/home/user/ClaudeTest/OpenDocEditor/src/OpenDocEditor.Core/obj/Debug/net8.0/OpenDocEditor.Core.dll
+/home/user/ClaudeTest/OpenDocEditor/src/OpenDocEditor.Core/obj/Debug/net8.0/refint/OpenDocEditor.Core.dll
+/home/user/ClaudeTest/OpenDocEditor/src/OpenDocEditor.Core/obj/Debug/net8.0/OpenDocEditor.Core.pdb
+/home/user/ClaudeTest/OpenDocEditor/src/OpenDocEditor.Core/obj/Debug/net8.0/ref/OpenDocEditor.Core.dll
