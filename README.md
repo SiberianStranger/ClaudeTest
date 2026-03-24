@@ -12,7 +12,7 @@
 
 | Файл | Версия | Платформа | Размер |
 |------|--------|-----------|--------|
-| [**OpenDocEditor.exe**](https://github.com/siberianstranger/claudetest/raw/main/OpenDocEditor/release/OpenDocEditor.exe) | 1.0.0 | Windows 10/11 x64 | ~47 МБ |
+| [**OpenDocEditor.exe**](https://github.com/siberianstranger/claudetest/raw/main/OpenDocEditor/release/OpenDocEditor.exe) | 1.2.0 | Windows 10/11 x64 | ~47 МБ |
 
 **Как скачать:**
 1. Нажмите на ссылку выше — откроется прямая загрузка
@@ -150,6 +150,39 @@ dotnet publish src/OpenDocEditor.App \
   -p:PublishSingleFile=true \
   -o release
 ```
+
+---
+
+## Changelog
+
+### v1.2.0 (2026-03-24)
+**Визуальная доработка и стабилизация редактирования**
+
+- **UI**: современная тема — кнопки с закруглёнными углами, hover-эффекты, более светлый фон документа
+- **Toolbar**: синхронизирован список размеров шрифта (8–72 pt) с выбором из ComboBox
+- **Пробелы**: исправлен рендеринг — используется *sentinel trick* (`Width("text i") − Width("i")`) для корректного измерения advance width при trailing space в Avalonia
+- **Каретка**: реализовано click-to-position — клик мышью позиционирует каретку в точное место абзаца через бинарный поиск по символьным смещениям
+- **Производительность**: набор текста больше не вызывает полную перестройку страниц; `FastRefresh` (только `InvalidateVisual`) используется для вставки/удаления символов, `FullRebuild` только при изменении структуры абзацев
+- **Окно**: добавлен `ExtendClientAreaToDecorationsHint="False"` для гарантированного отображения нативного заголовка Windows (кнопки свернуть / развернуть / закрыть)
+
+### v1.1.0 (2026-03-24)
+**Редактирование текста и базовые исправления**
+
+- Реализовано редактирование документа: вставка символов (`OnTextInput`), удаление (`Backspace`/`Delete`), разрыв абзаца (`Enter`), навигация стрелками, `Home`/`End`
+- Мигающая каретка (530 мс) с отрисовкой в `PageControl.RenderParagraph`; `LineSeg` хранит `CharStart` для точного X-позиционирования
+- `SystemDecorations="Full"` и `CanResize="True"` добавлены в `MainWindow.axaml`
+- Событие `DocumentModified` из `DocumentCanvas` подключено к `ViewModel.MarkModified()`
+- Попытка fix пробелов (trailing-space токены) — заменена более надёжным sentinel методом в v1.2.0
+
+### v1.0.0 (2026-03-24)
+**Первый релиз**
+
+- Чтение и сохранение `.docx` (OpenXML SDK)
+- Постраничный рендеринг документа (кастомный layout engine)
+- Экспорт в PDF (PdfSharpCore)
+- Панель СЭД / метаданные ЭДО
+- Интеграционные заглушки: КриптоПро, СМЭВ, Directum, ЕСИА, Госключ, 1С, WebDAV
+- Плагинная архитектура
 
 ---
 
